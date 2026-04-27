@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy · Todak Time</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      background: #0a0a0f;
+      color: #e8e8ed;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .hero {
+      background: linear-gradient(160deg, #1a1040 0%, #0d0d1a 50%, #0a0a0f 100%);
+      padding: 80px 24px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -120px; left: 50%;
+      transform: translateX(-50%);
+      width: 600px; height: 400px;
+      background: radial-gradient(ellipse, rgba(99,76,200,0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 999px;
+      padding: 6px 16px;
+      font-size: 12px;
+      color: #a89fd8;
+      letter-spacing: 0.04em;
+      margin-bottom: 24px;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: #7c6cd6;
+      border-radius: 50%;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .hero h1 span {
+      background: linear-gradient(90deg, #a78bfa, #7c6cd6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-meta { font-size: 13px; color: #6e6e73; }
+
+    .content {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    .callout {
+      background: linear-gradient(135deg, rgba(99,76,200,0.12), rgba(99,76,200,0.06));
+      border: 1px solid rgba(99,76,200,0.3);
+      border-radius: 14px;
+      padding: 22px 26px;
+      margin: 32px 0;
+    }
+    .callout-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #a78bfa;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .callout p { font-size: 14px; color: #b0b0bf; line-height: 1.75; margin: 0; }
+
+    .section { margin-bottom: 52px; }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .section-num {
+      font-size: 11px;
+      font-weight: 600;
+      color: #7c6cd6;
+      letter-spacing: 0.08em;
+      background: rgba(99,76,200,0.15);
+      border: 1px solid rgba(99,76,200,0.25);
+      border-radius: 6px;
+      padding: 3px 9px;
+      white-space: nowrap;
+    }
+    h2 { font-size: 18px; font-weight: 600; color: #f0f0f5; letter-spacing: -0.01em; }
+
+    p { font-size: 15px; color: #9898a8; margin-bottom: 12px; line-height: 1.8; }
+    p:last-child { margin-bottom: 0; }
+
+    ul { list-style: none; margin: 12px 0; }
+    li { font-size: 15px; color: #9898a8; padding: 5px 0 5px 20px; position: relative; line-height: 1.7; }
+    li::before { content: '·'; position: absolute; left: 6px; color: #7c6cd6; font-weight: 700; }
+
+    .table-wrap {
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 16px 0;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    thead tr { background: rgba(255,255,255,0.04); }
+    th {
+      text-align: left;
+      padding: 12px 18px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #6e6e80;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    td {
+      padding: 13px 18px;
+      color: #9898a8;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    tr:last-child td { border-bottom: none; }
+    td:first-child { color: #c8c8d8; font-weight: 500; }
+
+    a { color: #a78bfa; text-decoration: none; border-bottom: 1px solid rgba(167,139,250,0.3); transition: border-color 0.2s; }
+    a:hover { border-color: #a78bfa; }
+
+    .footer { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 36px; margin-top: 60px; }
+    .footer p { font-size: 13px; color: #4a4a5a; margin: 0; }
+
+    @media (max-width: 600px) {
+      .hero { padding: 60px 20px 48px; }
+      .content { padding: 48px 20px 80px; }
+      h2 { font-size: 16px; }
+      th, td { padding: 10px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="hero-badge">Privacy Policy</div>
+    <h1>Todak Time<br><span>Privacy Policy</span></h1>
+    <p class="hero-meta">Effective April 28, 2025 &nbsp;·&nbsp; Last updated April 28, 2025</p>
+  </div>
+
+  <div class="content">
+
+    <div class="callout">
+      <div class="callout-title">Core Principle</div>
+      <p>Todak does not operate any developer servers.<br>
+      All data is stored solely on your device or in your personal iCloud account.<br>
+      The developer has no access to your data.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-header"><span class="section-num">01</span><h2>Overview</h2></div>
+      <p>Todak Time is a subject-based focus timer app for anyone studying for exams.</p>
+      <p>This policy explains what information is processed and how when you use the app.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-header"><span class="section-num">02</span><h2>Information We Store</h2></div>
+      <p>The following data is stored on your device:</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Item</th><th>Content</th><th>Storage</th></tr></thead>
+          <tbody>
+            <tr><td>Subjects</td><td>Subject name, color, daily goal</td><td>Device / iCloud (optional)</td></tr>
+            <tr><td>Study sessions</td><td>Start/end time, subject name, duration</td><td>Device / iCloud (optional)</td></tr>
+            <tr><td>Exam schedules</td><td>Exam name, date</td><td>Device / iCloud (optional)</td></tr>
+            <tr><td>App settings</td><td>Language, appearance, haptics, notification interval</td><td>Device only</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>All data is entered directly by the user. The app does not collect data automatically.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-header"><span class="section-num">03</span><h2>Information We Do Not Collect</h2></div>
+      <p>Todak does not collect any of the following:</p>
+      <ul>
+        <li>Personal identifiers (name, email, phone number, etc.)</li>
+        <li>Location data (GPS or IP-based)</li>
+        <li>Contacts, photos, camera, or microphone data</li>
+        <li>Advertising identifiers (IDFA, IDFV, etc.)</li>
+        <li>Device unique identifiers</li>
+        <li>Browsing or search history</li>
+        <li>Data from other apps</li>
+        <li>Crash reports or diagnostic data</li>
+        <li>Behavioral analytics (no analytics SDK)</li>
+        <li>Social login information</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-header"><span class="section-num">04</span><h2>iCloud Sync</h2></div>
+      <p>If iCloud sync is enabled, your subjects, sessions, and schedules are synced across devices via your personal iCloud account.</p>
+      <ul>
+        <li>The developer cannot access synced data.</li>
+        <li>Apple's CloudKit infrastructure is used, subject to the <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy Policy</a>.</li>
+        <li>iCloud sync can be disabled at any time in app settings.</li>
+        <li>When disabled, data remains only on the local device.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-header"><span class="section-num">05</span><h2>In-App Purchases</h2></div>
+      <p>Premium feature purchases are processed exclusively through the Apple App Store.</p>
+      <ul>
+        <li>Payment information is never shared with the developer.</li>
+        <li>Purchase verification occurs only between Apple's servers and your device.</li>
+        <li>Refunds are handled under <a href="https://support.apple.com/en-us/118223" target="_blank">Apple's refund policy</a>.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-header"><span class="section-num">06</span><h2>Local Notifications</h2></div>
+      <p>The app sends the following notifications when configured by the user:</p>
+      <ul>
+        <li>Timer check-in reminders (at your chosen interval)</li>
+        <li>Exam D-day countdown notifications</li>
+      </ul>
+      <p>All notifications are generated on-device. No external server is involved. Notification permission can be revoked anytime in iOS Settings.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-header"><span class="section-num">07</span><h2>Third-Party Sharing</h2></div>
+      <p>Todak does not sell, rent, or share user data with any third party. Apple services used by the app:</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Service</th><th>Purpose</th></tr></thead>
+          <tbody>
+            <tr><td>CloudKit</td><td>iCloud sync (only when enabled by user)</td></tr>
+            <tr><td>App Store / StoreKit</td><td>In-app purchase processing</td></tr>
+            <tr><td>UNUserNotifications</td><td>Local notification delivery (no server)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>All services are subject to the <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy Policy</a>.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-header"><span class="section-num">08</span><h2>Data Retention & Deletion</h2></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Situation</th><th>Result</th></tr></thead>
+          <tbody>
+            <tr><td>App deletion</td><td>All on-device data deleted immediately</td></tr>
+            <tr><td>iCloud data removal</td><td>Settings → [Name] → iCloud → Manage Storage → Todak → Delete</td></tr>
+            <tr><td>In-app reset</td><td>Settings → "Reset All Data"</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>No data is retained on developer servers, so no deletion request to the developer is necessary.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-header"><span class="section-num">09</span><h2>Children's Privacy</h2></div>
+      <p>Todak does not knowingly collect personal information from children under 14. Since no personal identifiers are collected, the same level of protection applies to all users regardless of age.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-header"><span class="section-num">10</span><h2>Your Rights</h2></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Right</th><th>How to exercise</th></tr></thead>
+          <tbody>
+            <tr><td>Access</td><td>View all data directly within the app</td></tr>
+            <tr><td>Correction</td><td>Edit subjects, schedules, etc. within the app</td></tr>
+            <tr><td>Deletion</td><td>Settings → "Reset All Data" or delete the app</td></tr>
+            <tr><td>Portability</td><td>Settings → Export CSV</td></tr>
+            <tr><td>Stop sync</td><td>Settings → Disable iCloud Sync</td></tr>
+            <tr><td>Revoke notifications</td><td>iOS Settings → Todak → Notifications → Disable</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header"><span class="section-num">11</span><h2>Security</h2></div>
+      <ul>
+        <li>On-device data is protected by iOS sandbox security.</li>
+        <li>iCloud sync data is encrypted by Apple in transit and at rest.</li>
+        <li>No developer server means no risk of server-side data breach.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-header"><span class="section-num">12</span><h2>Policy Changes</h2></div>
+      <p>If this policy changes, the "Last updated" date at the top of this page will be updated. Significant changes will be noted in the app update release notes. Continued use of the app after changes constitutes acceptance of the revised policy.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-header"><span class="section-num">13</span><h2>Contact</h2></div>
+      <p>For privacy-related inquiries, please reach out:</p>
+      <p><a href="mailto:ninemomo.public@gmail.com">ninemomo.public@gmail.com</a></p>
+    </div>
+
+    <div class="footer">
+      <p>This policy is written in consideration of the Korean Personal Information Protection Act (PIPA) and relevant provisions of the EU General Data Protection Regulation (GDPR).</p>
+    </div>
+
+  </div>
+</body>
+</html>
