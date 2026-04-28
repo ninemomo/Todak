@@ -3,276 +3,275 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>개인정보처리방침 · 토닥 타임</title>
+  <title>개인정보처리방침 · 토닥</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --blue: #2563EB;
-      --blue-dim: rgba(37, 99, 235, 0.12);
-      --blue-border: rgba(37, 99, 235, 0.28);
-      --bg: #07090f;
-      --bg-subtle: #0d1117;
-      --line: rgba(255,255,255,0.055);
-      --text-primary: #f1f3f7;
-      --text-secondary: #8a909e;
-      --text-muted: #3e4452;
+      --bg: #09090b;
+      --surface: #111113;
+      --line: rgba(255,255,255,0.07);
+      --line-strong: rgba(255,255,255,0.12);
+      --accent: #3b82f6;
+      --text-primary: #e4e4e7;
+      --text-secondary: #71717a;
+      --text-muted: #3f3f46;
+      --text-label: #a1a1aa;
     }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Helvetica Neue", sans-serif;
       background: var(--bg);
       color: var(--text-primary);
-      line-height: 1.8;
+      line-height: 1.75;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── Hero ── */
-    .hero {
-      padding: 96px 24px 72px;
-      text-align: center;
-      border-bottom: 1px solid var(--line);
-      position: relative;
-    }
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: -1px; left: 50%;
-      transform: translateX(-50%);
-      width: 180px; height: 1px;
-      background: var(--blue);
-      opacity: 0.6;
+    /* ── Header ── */
+    header {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 80px 24px 64px;
     }
 
-    .app-name {
-      display: inline-block;
+    .badge {
       font-size: 11px;
       font-weight: 600;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 28px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
     }
 
-    .hero h1 {
-      font-size: clamp(32px, 5vw, 52px);
-      font-weight: 700;
+    header h1 {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 600;
       color: #ffffff;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-      margin-bottom: 18px;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      margin-bottom: 16px;
     }
 
-    .hero-meta {
+    .meta {
       font-size: 13px;
       color: var(--text-muted);
-      letter-spacing: 0.02em;
     }
 
     /* ── Layout ── */
-    .content {
-      max-width: 680px;
+    main {
+      max-width: 640px;
       margin: 0 auto;
-      padding: 72px 24px 120px;
+      padding: 0 24px 120px;
     }
 
-    /* ── Callout ── */
-    .callout {
-      background: var(--blue-dim);
-      border: 1px solid var(--blue-border);
-      border-left: 3px solid var(--blue);
-      border-radius: 8px;
-      padding: 20px 24px;
-      margin: 40px 0 56px;
+    /* ── Section ── */
+    section {
+      padding: 40px 0;
+      border-top: 1px solid var(--line);
     }
-    .callout-title {
+
+    section:first-child {
+      border-top: none;
+    }
+
+    .section-label {
       font-size: 11px;
-      font-weight: 700;
-      color: var(--blue);
-      letter-spacing: 0.1em;
+      font-weight: 600;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-    .callout p {
-      font-size: 14px;
-      color: #9aa3b5;
-      line-height: 1.75;
-      margin: 0;
-    }
-
-    /* ── Sections ── */
-    .section { margin-bottom: 56px; }
-
-    .section-header {
-      display: flex;
-      align-items: baseline;
-      gap: 16px;
-      margin-bottom: 20px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .section-num {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--blue);
-      letter-spacing: 0.1em;
-      font-variant-numeric: tabular-nums;
-      min-width: 24px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
     }
 
     h2 {
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 600;
       color: var(--text-primary);
       letter-spacing: -0.01em;
+      margin-bottom: 16px;
     }
 
     p {
-      font-size: 15px;
+      font-size: 14.5px;
       color: var(--text-secondary);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       line-height: 1.8;
     }
     p:last-child { margin-bottom: 0; }
 
-    ul { list-style: none; margin: 14px 0; }
+    ul {
+      list-style: none;
+      margin: 12px 0;
+    }
     li {
-      font-size: 15px;
+      font-size: 14.5px;
       color: var(--text-secondary);
-      padding: 4px 0 4px 18px;
+      padding: 3px 0 3px 16px;
       position: relative;
       line-height: 1.75;
     }
     li::before {
       content: '';
       position: absolute;
-      left: 4px;
-      top: 13px;
-      width: 4px; height: 4px;
-      background: var(--blue);
+      left: 2px;
+      top: 12px;
+      width: 3px;
+      height: 3px;
+      background: var(--text-muted);
       border-radius: 50%;
-      opacity: 0.7;
     }
 
     /* ── Table ── */
     .table-wrap {
-      border: 1px solid var(--line);
-      border-radius: 10px;
+      margin: 16px 0;
+      border-radius: 8px;
       overflow: hidden;
-      margin: 18px 0;
-      background: var(--bg-subtle);
+      border: 1px solid var(--line-strong);
+      background: var(--surface);
     }
-    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+
     th {
       text-align: left;
-      padding: 11px 18px;
+      padding: 10px 16px;
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 600;
       color: var(--text-muted);
-      letter-spacing: 0.08em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid var(--line-strong);
+      background: rgba(255,255,255,0.02);
     }
+
     td {
-      padding: 13px 18px;
+      padding: 12px 16px;
       color: var(--text-secondary);
       border-bottom: 1px solid var(--line);
       vertical-align: top;
-      line-height: 1.6;
+      line-height: 1.65;
     }
+
     tr:last-child td { border-bottom: none; }
-    td:first-child { color: #c5cad6; font-weight: 500; }
+
+    td:first-child {
+      color: var(--text-label);
+      font-weight: 500;
+      white-space: nowrap;
+    }
 
     /* ── Links ── */
     a {
-      color: #5b92f5;
+      color: var(--accent);
       text-decoration: none;
-      border-bottom: 1px solid rgba(91,146,245,0.25);
-      transition: border-color 0.15s, color 0.15s;
     }
-    a:hover { color: #82aef8; border-color: rgba(91,146,245,0.6); }
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
 
     /* ── Footer ── */
-    .footer {
+    footer {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
       border-top: 1px solid var(--line);
-      padding-top: 32px;
-      margin-top: 64px;
     }
-    .footer p {
+
+    footer p {
       font-size: 13px;
       color: var(--text-muted);
       line-height: 1.7;
-      margin: 0;
+      margin-bottom: 6px;
     }
+    footer p:last-child { margin-bottom: 0; }
 
     @media (max-width: 600px) {
-      .hero { padding: 72px 20px 56px; }
-      .content { padding: 56px 20px 96px; }
-      h2 { font-size: 16px; }
-      th, td { padding: 10px 14px; }
+      header { padding: 60px 20px 48px; }
+      main { padding: 0 20px 96px; }
+      footer { padding: 28px 20px 56px; }
+      td:first-child { white-space: normal; }
     }
   </style>
 </head>
 <body>
 
-  <div class="hero">
-    <div class="app-name">Todak Time</div>
+  <header>
+    <div class="badge">Todak</div>
     <h1>개인정보처리방침</h1>
-    <p class="hero-meta">시행일 2025년 4월 28일 &nbsp;·&nbsp; 최종 수정일 2025년 4월 28일</p>
-  </div>
+    <p class="meta">시행일 2026년 4월 28일</p>
+  </header>
 
-  <div class="content">
+  <main>
 
-    <div class="callout">
-      <div class="callout-title">핵심 원칙</div>
-      <p>토닥은 개발자 서버를 운영하지 않습니다.<br>
-      모든 데이터는 사용자의 기기 또는 사용자 본인의 iCloud 계정에만 저장됩니다.<br>
-      개발자는 사용자 데이터에 접근할 수 없습니다.</p>
-    </div>
+    <section>
+      <div class="section-label">01</div>
+      <h2>개요</h2>
+      <p>토닥(Todak)은 시험을 준비하는 누구나 사용할 수 있는 과목별 집중 타이머 앱입니다.</p>
+      <p>토닥은 별도의 개발자 서버를 운영하지 않습니다. 모든 데이터는 사용자의 기기 또는 사용자 본인의 iCloud 계정에만 저장되며, 개발자는 사용자 데이터에 접근할 수 없습니다.</p>
+    </section>
 
-    <div class="section">
-      <div class="section-header"><span class="section-num">01</span><h2>개요</h2></div>
-      <p>토닥 타임(Todak Time)은 시험을 준비하는 누구나 사용할 수 있는 과목별 집중 타이머 앱입니다.</p>
-      <p>본 방침은 앱을 사용하는 과정에서 어떤 정보가 어떻게 처리되는지를 명확히 안내합니다.</p>
-    </div>
-
-    <div class="section">
-      <div class="section-header"><span class="section-num">02</span><h2>수집하는 정보</h2></div>
+    <section>
+      <div class="section-label">02</div>
+      <h2>수집하는 정보</h2>
       <p>토닥이 기기 내에 저장하는 데이터는 다음과 같습니다.</p>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>항목</th><th>내용</th><th>저장 위치</th></tr></thead>
+          <thead>
+            <tr><th>항목</th><th>내용</th><th>저장 위치</th></tr>
+          </thead>
           <tbody>
-            <tr><td>과목 정보</td><td>과목명, 색상, 하루 목표 시간</td><td>기기 / iCloud (선택)</td></tr>
-            <tr><td>공부 세션 기록</td><td>시작·종료 시각, 과목명, 공부 시간</td><td>기기 / iCloud (선택)</td></tr>
-            <tr><td>시험 일정</td><td>시험명, 날짜</td><td>기기 / iCloud (선택)</td></tr>
-            <tr><td>앱 설정</td><td>언어, 화면 모드, 햅틱, 알림 간격 등</td><td>기기 전용</td></tr>
+            <tr>
+              <td>과목 정보</td>
+              <td>과목명, 색상, 하루 목표 시간</td>
+              <td>기기 / iCloud (선택)</td>
+            </tr>
+            <tr>
+              <td>공부 세션 기록</td>
+              <td>시작·종료 시각, 과목명, 공부 시간, 기기 식별자¹</td>
+              <td>기기 / iCloud (선택)</td>
+            </tr>
+            <tr>
+              <td>시험 일정</td>
+              <td>시험명, 날짜</td>
+              <td>기기 / iCloud (선택)</td>
+            </tr>
+            <tr>
+              <td>앱 설정</td>
+              <td>언어, 화면 모드, 햅틱, 알림 간격 등</td>
+              <td>기기 전용</td>
+            </tr>
           </tbody>
         </table>
       </div>
-      <p>위 정보는 사용자가 직접 입력한 것이며, 앱이 자동으로 생성하거나 외부에서 수집하는 데이터가 아닙니다.</p>
-    </div>
+      <p style="font-size:13px; color: var(--text-muted); margin-top: 10px;">¹ 기기 식별자(identifierForVendor)는 iCloud 동기화 활성화 시 기기 간 데이터 충돌 방지 목적으로만 사용됩니다. 앱 삭제 시 초기화되며 사용자 개인을 식별하지 않습니다.</p>
+      <p style="margin-top: 14px;">위 정보는 사용자가 직접 입력한 것이며, 앱이 자동으로 생성하거나 외부에서 수집하는 데이터가 아닙니다.</p>
+    </section>
 
-    <div class="section">
-      <div class="section-header"><span class="section-num">03</span><h2>수집하지 않는 정보</h2></div>
+    <section>
+      <div class="section-label">03</div>
+      <h2>수집하지 않는 정보</h2>
       <p>토닥은 다음 정보를 일절 수집하지 않습니다.</p>
       <ul>
         <li>이름, 이메일, 전화번호 등 개인 식별 정보</li>
         <li>위치 정보 (GPS 및 IP 기반 위치 포함)</li>
         <li>연락처, 사진, 카메라, 마이크 접근 정보</li>
-        <li>광고 식별자 (IDFA, IDFV 등)</li>
-        <li>기기 고유 식별자</li>
+        <li>광고 식별자 (IDFA)</li>
         <li>검색 기록, 브라우징 기록</li>
         <li>타 앱 사용 정보</li>
         <li>충돌 리포트 및 자동 진단 데이터</li>
         <li>행동 분석 데이터 (애널리틱스 SDK 없음)</li>
         <li>소셜 로그인 정보</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
-      <div class="section-header"><span class="section-num">04</span><h2>iCloud 동기화</h2></div>
+    <section>
+      <div class="section-label">04</div>
+      <h2>iCloud 동기화</h2>
       <p>iCloud 동기화를 활성화한 경우, 과목·세션·일정 데이터가 사용자 본인의 iCloud 계정을 통해 기기 간 동기화됩니다.</p>
       <ul>
         <li>동기화 데이터는 개발자가 접근할 수 없습니다.</li>
@@ -280,69 +279,99 @@
         <li>iCloud 동기화는 앱 설정에서 언제든지 비활성화할 수 있습니다.</li>
         <li>동기화를 비활성화하면 데이터는 해당 기기 내에만 유지됩니다.</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
-      <div class="section-header"><span class="section-num">05</span><h2>인앱 결제</h2></div>
+    <section>
+      <div class="section-label">05</div>
+      <h2>인앱 결제</h2>
       <p>프리미엄 기능 구매는 Apple App Store 결제 시스템을 통해서만 처리됩니다.</p>
       <ul>
         <li>카드번호, 결제 정보 등은 개발자에게 전달되지 않습니다.</li>
         <li>구매 여부 확인은 Apple 서버와 기기 사이에서만 이루어집니다.</li>
         <li>환불은 <a href="https://support.apple.com/ko-kr/118223" target="_blank">Apple 환불 정책</a>에 따라 처리됩니다.</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
-      <div class="section-header"><span class="section-num">06</span><h2>로컬 알림</h2></div>
+    <section>
+      <div class="section-label">06</div>
+      <h2>로컬 알림</h2>
       <p>앱은 사용자가 설정한 경우에 한해 다음 알림을 발송합니다.</p>
       <ul>
         <li>타이머 체크인 알림 (설정한 간격마다)</li>
         <li>시험 D-day 카운트다운 알림</li>
       </ul>
       <p>로컬 알림은 기기 내에서만 생성되며, 외부 서버를 통해 발송되지 않습니다. 알림 권한은 iOS 설정에서 언제든지 철회할 수 있습니다.</p>
-    </div>
+    </section>
 
-    <div class="section">
-      <div class="section-header"><span class="section-num">07</span><h2>제3자 제공 및 공유</h2></div>
+    <section>
+      <div class="section-label">07</div>
+      <h2>제3자 제공 및 공유</h2>
       <p>토닥은 사용자 데이터를 어떤 제3자에게도 판매, 임대, 공유하지 않습니다.</p>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>Apple 서비스</th><th>역할</th></tr></thead>
+          <thead>
+            <tr><th>Apple 서비스</th><th>역할</th></tr>
+          </thead>
           <tbody>
-            <tr><td>CloudKit</td><td>iCloud 기기 간 동기화 (사용자 선택 시에만)</td></tr>
-            <tr><td>App Store / StoreKit</td><td>인앱 결제 처리</td></tr>
-            <tr><td>UNUserNotifications</td><td>로컬 알림 생성 (서버 없음)</td></tr>
+            <tr>
+              <td>CloudKit</td>
+              <td>iCloud 기기 간 동기화 (사용자 선택 시에만)</td>
+            </tr>
+            <tr>
+              <td>App Store / StoreKit</td>
+              <td>인앱 결제 처리</td>
+            </tr>
+            <tr>
+              <td>UNUserNotifications</td>
+              <td>로컬 알림 생성 (서버 없음)</td>
+            </tr>
           </tbody>
         </table>
       </div>
       <p>모든 서비스는 <a href="https://www.apple.com/kr/legal/privacy/kr/" target="_blank">Apple 개인정보처리방침</a>이 적용됩니다.</p>
-    </div>
+    </section>
 
-    <div class="section">
-      <div class="section-header"><span class="section-num">08</span><h2>데이터 보존 및 삭제</h2></div>
+    <section>
+      <div class="section-label">08</div>
+      <h2>데이터 보존 및 삭제</h2>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>상황</th><th>처리 결과</th></tr></thead>
+          <thead>
+            <tr><th>상황</th><th>처리 결과</th></tr>
+          </thead>
           <tbody>
-            <tr><td>앱 삭제</td><td>기기 내 모든 데이터 즉시 삭제</td></tr>
-            <tr><td>iCloud 데이터 삭제</td><td>설정 → [이름] → iCloud → 저장 용량 관리 → 토닥 → 삭제</td></tr>
-            <tr><td>앱 내 초기화</td><td>설정 → "전체 데이터 초기화"로 즉시 삭제</td></tr>
+            <tr>
+              <td>앱 삭제</td>
+              <td>기기 내 모든 데이터 즉시 삭제</td>
+            </tr>
+            <tr>
+              <td>iCloud 데이터 삭제</td>
+              <td>설정 → [이름] → iCloud → 저장 용량 관리 → 토닥 → 삭제</td>
+            </tr>
+            <tr>
+              <td>앱 내 초기화</td>
+              <td>설정 → "전체 데이터 초기화"로 즉시 삭제</td>
+            </tr>
           </tbody>
         </table>
       </div>
       <p>개발자는 사용자 데이터를 별도 서버에 보존하지 않으므로, 개발자에게 삭제 요청을 별도로 보낼 필요가 없습니다.</p>
-    </div>
+    </section>
 
-    <div class="section">
-      <div class="section-header"><span class="section-num">09</span><h2>아동 개인정보 보호</h2></div>
+    <section>
+      <div class="section-label">09</div>
+      <h2>아동 개인정보 보호</h2>
       <p>토닥은 만 14세 미만 아동을 대상으로 개인정보를 의도적으로 수집하지 않습니다. 앱 내에서 개인 식별 정보를 직접 수집하지 않으므로, 연령에 무관하게 동일한 보호 수준이 적용됩니다.</p>
-    </div>
+    </section>
 
-    <div class="section">
-      <div class="section-header"><span class="section-num">10</span><h2>사용자의 권리</h2></div>
+    <section>
+      <div class="section-label">10</div>
+      <h2>사용자의 권리</h2>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>권리</th><th>방법</th></tr></thead>
+          <thead>
+            <tr><th>권리</th><th>방법</th></tr>
+          </thead>
           <tbody>
             <tr><td>열람</td><td>앱 내 모든 데이터 직접 확인 가능</td></tr>
             <tr><td>수정</td><td>과목명, 시험 일정 등 앱 내에서 직접 수정</td></tr>
@@ -353,32 +382,37 @@
           </tbody>
         </table>
       </div>
-    </div>
+    </section>
 
-    <div class="section">
-      <div class="section-header"><span class="section-num">11</span><h2>보안</h2></div>
+    <section>
+      <div class="section-label">11</div>
+      <h2>보안</h2>
       <ul>
         <li>앱 내 데이터는 iOS 기본 샌드박스 보안 체계로 보호됩니다.</li>
         <li>iCloud 동기화 데이터는 Apple이 암호화하여 전송·저장합니다.</li>
         <li>개발자 서버가 없으므로 서버 침해로 인한 데이터 유출 위험이 없습니다.</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
-      <div class="section-header"><span class="section-num">12</span><h2>방침 변경</h2></div>
-      <p>개인정보처리방침이 변경될 경우 본 페이지 상단의 최종 수정일을 업데이트합니다. 중요한 변경사항은 앱 업데이트 노트에 명시합니다. 변경 후에도 앱을 계속 사용하면 변경된 방침에 동의한 것으로 간주합니다.</p>
-    </div>
+    <section>
+      <div class="section-label">12</div>
+      <h2>방침 변경</h2>
+      <p>개인정보처리방침이 변경될 경우 본 페이지 상단의 시행일을 업데이트합니다. 중요한 변경사항은 앱 업데이트 노트에 명시합니다.</p>
+    </section>
 
-    <div class="section">
-      <div class="section-header"><span class="section-num">13</span><h2>문의</h2></div>
+    <section>
+      <div class="section-label">13</div>
+      <h2>문의</h2>
       <p>개인정보 관련 문의사항이 있으시면 아래로 연락해 주세요.</p>
       <p><a href="mailto:ninemomo.public@gmail.com">ninemomo.public@gmail.com</a></p>
-    </div>
+    </section>
 
-    <div class="footer">
-      <p>본 방침은 대한민국 개인정보보호법(PIPA) 및 유럽 일반개인정보보호규정(GDPR)의 관련 조항을 고려하여 작성되었습니다.</p>
-    </div>
+  </main>
 
-  </div>
+  <footer>
+    <p>본 방침은 대한민국 개인정보보호법(PIPA) 및 유럽 일반개인정보보호규정(GDPR)의 관련 조항을 고려하여 작성되었습니다.</p>
+    <p style="margin-top: 8px;">© 2026 Todak. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
